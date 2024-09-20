@@ -8,6 +8,8 @@ const prisma=require("./api/prismaConnection")
 app.use(bodyparser.urlencoded({ extended: true }));
 app.use(bodyparser.json());
 app.use(cors());
+
+//Main function 
 async function init() {
   try {
     await prisma.$connect()
