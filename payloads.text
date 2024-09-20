@@ -1,0 +1,34 @@
+// Initially Run Command: npm i
+// To Run Project: npm start
+
+
+
+1. Add Chatbot Questions
+
+route: localhost:4000/addMany/chat
+method: post
+payload:
+[
+    {
+        "category": "Appointment Booking",
+        "question": "How can I book an appointment with a doctor?",
+        "answer": "You can book an appointment by visiting our website, using our mobile app, or calling our appointment line at [Phone Number]. If you need assistance, our customer service team is here to help."
+    },
+    {
+        "category": "Visiting Hours",
+        "question": "What are the visiting hours for the hospital?",
+        "answer": "Visiting hours are from 9:00 AM to 8:00 PM daily. Please note that some departments may have specific visiting times, so it's best to check with the ward or department you're planning to visit."
+    }
+]
+
+2. Find ChatBot Questions
+
+route: localhost:4000/findMany/chat
+method: post
+payload:
+{
+    "where": {
+        "category":"Appointment Booking"
+    }
+}
+
